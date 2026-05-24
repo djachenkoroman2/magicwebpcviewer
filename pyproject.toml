@@ -1,0 +1,29 @@
+[project]
+name = "magicwebpcviewer"
+version = "0.1.0"
+description = "Server-rendered web viewer for point clouds."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "laspy[lazrs]>=2.5.4",
+    "numpy>=1.26.4",
+    "panel>=1.4.5",
+    "pillow>=10.3.0",
+    "pyvista>=0.43.8",
+]
+
+[project.scripts]
+magicwebpcviewer = "magicwebpcviewer.__main__:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.2.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

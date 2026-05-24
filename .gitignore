@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+data/clouds/*
+!data/clouds/.gitkeep
+!data/clouds/uploads/
+!data/clouds/uploads/.gitkeep
+!data/clouds/processed/
+!data/clouds/processed/.gitkeep
